@@ -2,7 +2,7 @@ import { HStack, List, ListItem, Image, Text, Button } from "@chakra-ui/react";
 import useGenres, { Genre } from "../Hooks/useGenres";
 import getCroppedImageUrl from "../services/image-url";
 import GenreCardSkeleton from "./GenreCardSkeleton";
-import GameCardContainer from "./GameCardContainer";
+
 
 interface Props {
   onSelectGenre: (genre: Genre) => void;
@@ -14,6 +14,7 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
   const genreskeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   if (error) return null;
+  
   return (
     <>
       <List>
